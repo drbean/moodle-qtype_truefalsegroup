@@ -39,17 +39,17 @@ class qtype_truefalsegroup_question extends qtype_truefalse_question {
      *
      * @return array|string.
      */
-    public function get_expected_data() {
-        return array();
-    }
+    //public function get_expected_data() {
+    //    return array();
+    //}
 
     /**
      * Returns the data that would need to be submitted to get a correct answer.
      *
      * @return array|null Null if it is not possible to compute a correct response.
      */
-    public function get_correct_response() {
-        return null;
+    //public function get_correct_response() {
+    //    return null;
     }
 
     /**
