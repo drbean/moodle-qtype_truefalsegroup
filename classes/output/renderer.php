@@ -30,7 +30,7 @@ defined('MOODLE_INTERNAL') || die();
  * You should override functions as necessary from the parent class located at
  * /question/type/rendererbase.php.
  */
-class qtype_truefalsegroup_renderer extends qtype_renderer {
+class qtype_truefalsegroup_renderer extends qtype_truefalse_renderer {
 
     /**
      * Generates the display of the formulation part of the question. This is the
