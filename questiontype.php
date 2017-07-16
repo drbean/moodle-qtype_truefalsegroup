@@ -34,7 +34,7 @@ require_once($CFG->libdir.'/questionlib.php');
  * of this type. It can also provide the implementation for import and export
  * in various formats.
  */
-class qtype_truefalsegroup extends question_type {
+class qtype_truefalsegroup extends qtype_truefalse {
 
     // Override functions as necessary from the parent class located at
     // /question/type/questiontype.php.
