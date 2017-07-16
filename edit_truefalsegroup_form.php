@@ -30,7 +30,7 @@ defined('MOODLE_INTERNAL') || die();
  * You should override functions as necessary from the parent class located at
  * /question/type/edit_question_form.php.
  */
-class qtype_truefalsegroup_edit_form extends question_edit_form {
+class qtype_truefalsegroup_edit_form extends qtype_truefalse_edit_form {
 
     /**
      * Returns the question type name.
