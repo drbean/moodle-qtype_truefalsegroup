@@ -28,4 +28,12 @@ defined('MOODLE_INTERNAL') || die();
 if ($ADMIN->fulltree) {
    // TODO: Define the plugin settings page.
    // https://docs.moodle.org/dev/Admin_settings
+
+    $menu = array(
+        new lang_string('groupingone', 'qtype_truefalsegroup'),
+        new lang_string('groupingtwo', 'qtype_truefalsegroup'),
+    );
+    $settings->add(new admin_setting_configselect('qtype_truefalsegroup/grouping',
+    new lang_string('grouping', 'qtype_truefalsegroup'),
+    new lang_string('grouping_desc', 'qtype_truefalsegroup'), '1', $menu));
 }

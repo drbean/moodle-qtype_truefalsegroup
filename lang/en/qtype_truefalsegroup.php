@@ -42,3 +42,7 @@ $string['pluginname_link'] = 'question/type/truefalsegroup';
 $string['pluginnameadding'] = 'Adding a True/False question';
 $string['pluginnameediting'] = 'Editing a True/False question';
 $string['pluginnamesummary'] = 'A simple form of multiple choice question with just the two choices \'True\' and \'False\' and a group grade.';
+$string['groupingone'] = 'Grouping 1';
+$string['groupingtwo'] = 'Grouping 2';
+$string['grouping'] = 'Grouping for this session';
+$string['grouping_desc'] = 'The grouping whose group membership will be used to determine the group grade';
