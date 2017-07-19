@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->libdir.'/questionlib.php');
+require_once($CFG->dirroot . '/question/type/truefalse/questiontype.php');
 
 /**
  * Class that represents a truefalsegroup question type.
