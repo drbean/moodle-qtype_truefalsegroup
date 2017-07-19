@@ -24,6 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+require_once($CFG->dirroot . '/question/type/truefalse/edit_truefalse_form.php');
+
 /**
  * truefalsegroup question editing form defition.
  *
