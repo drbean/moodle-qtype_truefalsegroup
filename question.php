@@ -63,7 +63,7 @@ class qtype_truefalsegroup_question extends qtype_truefalse_question {
      * @param bool $forcedownload Whether the user must be forced to download the file.
      * @return bool True if the user can access this file.
      */
-    public function check_file_access($qa, $options, $component, $filearea, $args, $forcedownload) {
-        return parent::check_file_access($qa, $options, $component, $filearea, $args, $forcedownload);
-    }
+    //public function check_file_access($qa, $options, $component, $filearea, $args, $forcedownload) {
+    //    return parent::check_file_access($qa, $options, $component, $filearea, $args, $forcedownload);
+    //}
 }
