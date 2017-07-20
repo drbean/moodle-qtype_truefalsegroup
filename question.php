@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once($CFG->dirroot . '/question/type/truefalse/question.php')
+require_once($CFG->dirroot . '/question/type/truefalse/question.php');
 
 // For a complete list of base question classes please examine the file
 // /question/type/questionbase.php.
