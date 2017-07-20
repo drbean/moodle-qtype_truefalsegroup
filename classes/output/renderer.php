@@ -24,6 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+require_once($CFG->dirroot . '/question/type/truefalse/renderer.php');
+
 /**
  * Generates the output for truefalsegroup questions.
  *
