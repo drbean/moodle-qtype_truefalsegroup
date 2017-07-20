@@ -50,7 +50,7 @@ class qtype_truefalsegroup_question extends qtype_truefalse_question {
      */
     //public function get_correct_response() {
     //    return null;
-    }
+    //}
 
     /**
      * Checks whether the user is allowed to be served a particular file.
