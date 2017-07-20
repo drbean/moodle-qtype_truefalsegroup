@@ -56,7 +56,7 @@ class qtype_truefalsegroup_renderer extends qtype_truefalse_renderer {
      * @param question_attempt $qa the question attempt to display.
      * @return string HTML fragment.
      */
-    protected function specific_feedback(question_attempt $qa) {
+    public function specific_feedback(question_attempt $qa) {
         return parent::specific_feedback($qa);
     }
 
@@ -68,7 +68,7 @@ class qtype_truefalsegroup_renderer extends qtype_truefalse_renderer {
      * @param question_attempt $qa the question attempt to display.
      * @return string HTML fragment.
      */
-    protected function correct_response(question_attempt $qa) {
+    public function correct_response(question_attempt $qa) {
         return parent::correct_response($qa);
     }
 
