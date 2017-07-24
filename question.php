@@ -25,6 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->dirroot . '/question/type/truefalse/question.php');
+require_once($CFG->dirroot . '/lib/grouplib.php');
 
 // For a complete list of base question classes please examine the file
 // /question/type/questionbase.php.
@@ -35,6 +36,31 @@ require_once($CFG->dirroot . '/question/type/truefalse/question.php');
  * Class that represents a truefalsegroup question.
  */
 class qtype_truefalsegroup_question extends qtype_truefalse_question {
+
+    /**
+     * Returns the data that would need to be submitted to get a correct answer.
+     *
+     * @return array|null Null if it is not possible to compute a correct response.
+     */
+    //public function get_correct_response() {
+    //    return null;
+    //}
+
+    /**
+     * Needs to be extended to give group grade, but how to find group or $cm?
+     */
+
+    public function grade_response(array $response) {
+        if ($this->rightanswer == true && $response['answer'] == true) {
+            $fraction = 1;
+        } else if ($this->rightanswer == false && $response['answer'] == false) {
+            $fraction = 1;
+        } else {
+            $fraction = 0;
+        }
+        return array($fraction, question_state::graded_state_for_fraction($fraction));
+    }
+
 
     /**
      * Returns data to be included in the form submission.
