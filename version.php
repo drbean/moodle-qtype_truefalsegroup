@@ -26,6 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'qtype_truefalsegroup';
 $plugin->release = '0.1.0';
-$plugin->version = 2017072400;
+$plugin->version = 2017072500;
 $plugin->requires = 2017051500;
 $plugin->maturity = MATURITY_ALPHA;
