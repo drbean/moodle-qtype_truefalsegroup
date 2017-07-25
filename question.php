@@ -50,7 +50,8 @@ class qtype_truefalsegroup_question extends qtype_truefalse_question {
      * Needs to be extended to give group grade, but how to find group or $cm?
      */
 
-    public function grade_response(array $response) {
+    public function grade_response(question_attempt $qa, array $response) {
+	$id = $qa->id;
         if ($this->rightanswer == true && $response['answer'] == true) {
             $fraction = 1;
         } else if ($this->rightanswer == false && $response['answer'] == false) {
