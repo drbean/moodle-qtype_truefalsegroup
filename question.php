@@ -52,7 +52,7 @@ class qtype_truefalsegroup_question extends qtype_truefalse_question {
      */
 
     public function grade_response_group(question_attempt $qa, array $response) {
-	$id = $qa->id;
+	$others = groups_get_activity_shared_group_members($qa->cm, null);
         if ($this->rightanswer == true && $response['answer'] == true) {
             $fraction = 1;
         } else if ($this->rightanswer == false && $response['answer'] == false) {
