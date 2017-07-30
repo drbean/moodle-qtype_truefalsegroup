@@ -55,6 +55,7 @@ class qtype_truefalsegroup_question extends qtype_truefalse_question {
 	$others = groups_get_activity_shared_group_members($qa->cm, null);
 	$grades = array();
 	foreach ( $others as $other ) {
+		$cm = $other->cm;
 		$id = $other->id;
 		$grades[$id] = grade_response( $id );
 	}
