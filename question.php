@@ -52,19 +52,18 @@ class qtype_truefalsegroup_question extends qtype_truefalse_question {
      */
 
     public function grade_response_group(question_attempt $qa, array $response) {
-	$others = groups_get_activity_shared_group_members($qa->cm, null);
-	$grades = array();
-	foreach ( $others as $other ) {
-		$cm = $other->cm;
-		$id = $other->id;
-		$grades[$id] = grade_response( $id );
-	}
-        if ($this->rightanswer == true && $response['answer'] == true) {
-            $fraction = 1;
-        } else if ($this->rightanswer == false && $response['answer'] == false) {
-            $fraction = 1;
-        } else {
-            $fraction = 0;
+        $others = groups_get_activity_shared_group_members($qa->cm, null);
+        $grades = array();
+        foreach ( $others as $other ) {
+            $cm = $other->cm;
+            $id = $other->id;
+            $response = array( "answer" => TRUE );
+            $grades[$id] = grade_response( $response );
+        }
+        $n = count( $others );
+        $fraction = null;
+        if ( $n != 0 ) {
+            $fraction = array_sum( $grades ) / $n;
         }
         return array($fraction, question_state::graded_state_for_fraction($fraction));
     }
